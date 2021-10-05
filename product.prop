@@ -2,14 +2,14 @@
 ro.apex.updatable=false
 
 # Graphics
-    debug.hwui.renderer=opengl
-    debug.sf.hw=0
+    debug.hwui.renderer=skiagl
+    debug.sf.hw=1
     debug.egl.hw=0
     debug.sf.latch_unsignaled=1
     ro.surface_flinger.use_context_priority=true
     debug.sf.disable_backpressure=1
-    ro.hardware.egl=adreno
     ro.surface_flinger.use_color_management=true
+    ro.hardware.egl=adreno
     ro.hardware.vulkan=adreno
 
 # SurfaceFlinger
