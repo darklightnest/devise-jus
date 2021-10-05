@@ -57,6 +57,9 @@ ro.charger.enable_suspend=true
 # Netflix custom property
 ro.netflix.bsp_rev=Q6115-31409-1
 
+# Zygote
+    persist.device_config.runtime_native.usap_pool_enabled=true
+
 # vendor
 persist.vendor.ssr.restart_level=ALL_ENABLE
 persist.vendor.ssr.enable_ramdumps=1
