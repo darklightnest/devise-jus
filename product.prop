@@ -2,7 +2,7 @@
 ro.apex.updatable=false
 
 # Graphics
-    debug.hwui.renderer=skiagl
+    debug.hwui.renderer=opengl
     debug.sf.hw=1
     debug.egl.hw=0
     debug.sf.latch_unsignaled=1
