@@ -24,5 +24,5 @@
     <integer name="config_chargingSlowlyThreshold">2000000</integer>
 
     <!-- Threshold in micro watts above which a charger is rated as "fast"; 1.375 A @ 4.00 V = 5.50 W -->
-    <integer name="config_chargingFastThreshold">5500000</integer>
+    <integer name="config_chargingFastThreshold">09000000</integer>
 </resources>
