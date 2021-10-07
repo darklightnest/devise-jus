@@ -118,7 +118,11 @@
         <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value-->
         <Config
             Id="0x00001083" Enable="true" Timeout="500" Target="bengal"
+<<<<<<< HEAD
             Resources="0x40804000, 2016, 0x40804100, 1804, 0x40800000, 1804, 0x40800100, 1804" />
+=======
+            Resources="0x40804000, 2016, 0x40804100, 1804, 0x40800000, 2208, 0x40800100, 1804" />
+>>>>>>> bd18990... juice: perf: tune perfboostconfig for smoother ui
         <Config
             Id="0x00001083" Enable="true" Timeout="400" Target="scuba"
             Resources="0x40804000, 2016, 0x40800000, 2208" />
