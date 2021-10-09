@@ -61,10 +61,6 @@ PRODUCT_PACKAGES += \
  PRODUCT_PACKAGES += \
     BluetoothQti
 
-# Camera
-PRODUCT_PACKAGES += \
-    Snap
-
 # Codec2 modules
 PRODUCT_PACKAGES += \
     com.android.media.swcodec \
@@ -86,9 +82,17 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libvulkan
 
+# Doze
+PRODUCT_PACKAGES += \
+    XiaomiDoze
+
 # Fastbootd
 PRODUCT_PACKAGES += \
     fastbootd
+
+# Fstab
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/etc/fstab.default:$(TARGET_COPY_OUT_RAMDISK)/fstab.default
 
 # Google Photos
 PRODUCT_COPY_FILES += \
@@ -117,15 +121,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_BOOT_JARS += \
     telephony-ext
 
-# Fstab
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/etc/fstab.default:$(TARGET_COPY_OUT_RAMDISK)/fstab.default
-
-# Init
-PRODUCT_PACKAGES += \
-    init.mi_thermald.rc \
-    init.target.rc
-
 # Input
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/keylayout/gpio-keys.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/gpio-keys.kl \
@@ -148,8 +143,7 @@ DEVICE_PACKAGE_OVERLAYS += \
 
 # Remove unwanted packages
 PRODUCT_PACKAGES += \
-    NoCutoutOverlay \
-    NotchBarKiller
+    RemovePackages
 
 # Vendor Overlay
 PRODUCT_COPY_FILES += \
@@ -164,6 +158,7 @@ PRODUCT_PACKAGES += \
     CellBroadcastReceiverResCommon \
     FrameworksResCommon \
     FrameworksResTarget \
+    NotchBarKiller \
     SystemUIResCommon \
     TelecommResCommon \
     TelephonyResCommon \
