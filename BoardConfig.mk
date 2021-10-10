@@ -64,6 +64,19 @@ TARGET_USES_HWC2 := true
 # HWUI
 HWUI_COMPILE_FOR_PERF := true
 
+# Dex
+ifeq ($(HOST_OS),linux)
+    ifneq ($(TARGET_BUILD_VARIANT),eng)
+        ifeq ($(WITH_DEXPREOPT),)
+            WITH_DEXPREOPT := true
+            WITH_DEXPREOPT_BOOT_IMG_AND_SYSTEM_SERVER_ONLY := true
+        endif
+    endif
+endif
+DONT_DEXPREOPT_PREBUILTS := true
+USE_DEX2OAT_DEBUG := true
+WITH_DEXPREOPT_DEBUG_INFO := false
+
 # DRM
 TARGET_ENABLE_MEDIADRM_64 := true
 
@@ -107,8 +120,10 @@ BOARD_KERNEL_OFFSET := 0x00008000
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 BOARD_KERNEL_SEPARATED_DTBO := false
 TARGET_KERNEL_ARCH := arm64
+TARGET_KERNEL_CLANG_COMPILE := true
 TARGET_KERNEL_HEADERS := kernel/xiaomi/juice
- TARGET_KERNEL_CONFIG := vendor/mibengal_defconfig
+TARGET_KERNEL_SOURCE := kernel/xiaomi/juice
+TARGET_KERNEL_CONFIG := vendor/mibengal_defconfig
 TARGET_KERNEL_CLANG_COMPILE := true
 TARGET_KERNEL_CLANG_VERSION := proton
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-gnu-
@@ -194,9 +209,6 @@ BOARD_AVB_RECOVERY_KEY_PATH := external/avb/test/data/testkey_rsa4096.pem
 BOARD_AVB_RECOVERY_ALGORITHM := SHA256_RSA4096
 BOARD_AVB_RECOVERY_ROLLBACK_INDEX := 1
 BOARD_AVB_RECOVERY_ROLLBACK_INDEX_LOCATION := 1
-
-# Enable real time lockscreen charging current values
-BOARD_GLOBAL_CFLAGS += -DBATTERY_REAL_INFO
 
 # Inherit from the proprietary version
 -include vendor/xiaomi/juice/BoardConfigVendor.mk
