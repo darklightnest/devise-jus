@@ -89,6 +89,10 @@ on early-boot
     start vendor.sensors
 
 on boot
+# Adaptive Charging
+    chown system system /sys/class/power_supply/battery/input_suspend
+    chmod 0666 /sys/class/power_supply/battery/input_suspend
+
 # wuzhisen change Define cpu set for audio app. This is to optimize
 # audio scheduling against lpm exit latencies
     write /dev/cpuset/audio-app/cpus 1-2
@@ -98,6 +102,10 @@ on boot
 
 #xiong jiangxueqin To realize the communication between framework and thermal, we need to implement sys node in kernel
    chown system system /sys/class/thermal/thermal_message/sconfig
+
+# Touchpanel
+    chown system system /sys/touchpanel/double_tap
+    chmod 0664 /sys/touchpanel/double_tap
 
 #USB controller configuration
     setprop vendor.usb.rndis.func.name "gsi"
@@ -256,6 +264,7 @@ service closead /system/vendor/bin/displayf_bin s 0
 service displayfeature /system/bin/displayfeature
     class hal
     user root
+    interface vendor.xiaomi.hardware.displayfeature@1.0::IDisplayFeature default
     group system root
     oneshot
 
