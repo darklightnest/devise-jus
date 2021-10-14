@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/stag_juice.mk
+    $(LOCAL_DIR)/octavi_juice.mk
 
 COMMON_LUNCH_CHOICES := \
-    stag_juice-user \
-    stag_juice-userdebug \
-    stag_juice-eng
+    octavi_juice-user \
+    octavi_juice-userdebug \
+    octavi_juice-eng
