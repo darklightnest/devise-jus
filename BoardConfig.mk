@@ -197,8 +197,7 @@ TARGET_PRODUCT_PROP += $(DEVICE_PATH)/product.prop
 
 # Sepolicy
 include device/qcom/sepolicy/SEPolicy.mk
-SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
-SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/public
+BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private
 
 # Treble
 BOARD_VNDK_VERSION := current
