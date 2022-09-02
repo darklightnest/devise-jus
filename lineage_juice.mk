@@ -13,7 +13,7 @@ TARGET_INCLUDE_PIXEL_CHARGER  := true
 
 # Gapps
 TARGET_GAPPS_ARCH := arm64
-WITH_GAPPS := true
+WITH_GMS := true
 
 # Rice flags
 RICE_MAINTAINER := Darknius
