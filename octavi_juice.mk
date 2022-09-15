@@ -7,13 +7,10 @@
 $(call inherit-product, device/xiaomi/juice/device.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/aicp/config/common_full_phone.mk)
-
-TARGET_SCREEN_HEIGHT := 2340
-TARGET_SCREEN_WIDTH := 1080
+$(call inherit-product, vendor/octavi/config/common_full_phone.mk)
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := aicp_juice
+PRODUCT_NAME := octavi_juice
 PRODUCT_DEVICE := juice
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := sm6115
@@ -21,6 +18,10 @@ PRODUCT_MANUFACTURER := Xiaomi
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
-# AICP Device Maintainers
-PRODUCT_BUILD_PROP_OVERRIDES += \
-DEVICE_MAINTAINERS="Darknius"
+OCTAVI_DEVICE_MAINTAINER := Darknius
+TARGET_USES_BLUR := false
+TARGET_FACE_UNLOCK_SUPPORTED := true
+OCTAVI_BUILD_TYPE := OFFICIAL
+
+# Bootanimation
+TARGET_BOOT_ANIMATION_RES := 1080

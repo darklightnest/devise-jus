@@ -1,13 +1,13 @@
 #
-# Copyright (C) 2021 The aicpOS Project
+# Copyright (C) 2021 The octaviOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aicp_juice.mk
+    $(LOCAL_DIR)/octavi_juice.mk
 
 COMMON_LUNCH_CHOICES := \
-    aicp_juice-user \
-    aicp_juice-userdebug \
-    aicp_juice-eng
+    octavi_juice-user \
+    octavi_juice-userdebug \
+    octavi_juice-eng
