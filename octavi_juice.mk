@@ -12,8 +12,6 @@ $(call inherit-product, vendor/octavi/config/common_full_phone.mk)
 
 TARGET_GAPPS_ARCH := arm64
 TARGET_BOOT_ANIMATION_RES := 1080
-TARGET_SUPPORTS_BLUR := true
-TARGET_FACE_UNLOCK_SUPPORTED := true
 TARGET_INCLUDE_LIVE_WALLPAPERS := false
 
 # Device identifier. This must come after all inclusions.
@@ -29,7 +27,7 @@ PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 BUILD_FINGERPRINT := "google/redfin/redfin:11/RQ3A.211001.001/7641976:user/release-keys"
 
 # OctaviOS stuff
-TARGET_FACE_UNLOCK_SUPPORTED := true
+OCTAVI_DEVICE_MAINTAINER := Darknius
 TARGET_USES_BLUR := false
-OCTAVI_BUILD_TYPE := Unofficial
-OCTAVI_DEVICE_MAINTAINER := HunterX
+TARGET_FACE_UNLOCK_SUPPORTED := true
+OCTAVI_BUILD_TYPE := OFFICIAL
