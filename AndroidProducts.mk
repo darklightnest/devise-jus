@@ -1,13 +1,13 @@
 #
-# Copyright (C) 2021 The LineageOS Project
+# Copyright (C) 2021 The sparkOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_juice.mk
+    $(LOCAL_DIR)/spark_juice.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_juice-user \
-    lineage_juice-userdebug \
-    lineage_juice-eng
+    spark_juice-user \
+    spark_juice-userdebug \
+    spark_juice-eng
